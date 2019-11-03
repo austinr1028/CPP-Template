@@ -1,1 +1,7 @@
+#Build
 bin/
+.venv/
+
+#IDEs
+.idea
+.vscode

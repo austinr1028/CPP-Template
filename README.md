@@ -1,15 +1,21 @@
 # CPP-Template
 
-Template project that sets up a project to leverage the following technologies:
+## Purpose
+
+The purpose of this repository is to provide a baseline template for new C++ projects. It provides a project based upon industry standard tools, with a focus on ease of use. It supplies everything from source code formatting, a build system with an integrated package manager, unit tests, and more.
+
+The template project is built upon the following technologies:
 
 * CMake
 * clang-format (TODO)
+* clang-tidy (TODO)
 * Conan
 * Doxygen (TODO)
 * Google Test
 * Git
 * Ninja
 * Python 3
+* Travis (TODO)
 
 ## Requirements
 
@@ -21,7 +27,7 @@ Before being able to use this template, you need to have the following packages 
 
 ## Getting Started
 
-Run the provided configure.py script. This will install all build dependencies in to a python virtual environment at the root of the project dir, named .venv
+Run the provided [configure.py](configure.py) script. This will install all build dependencies in to a python virtual environment at the root of the project dir, named .venv
 
 Generating build directory:
 
@@ -29,7 +35,7 @@ Generating build directory:
 $ python3 configure.py
 ...
 Installed all project dependencies
-$ export PATH=:venv/bin:$PATH #Optional to put cmake in path
+$ export PATH=.venv/bin:$PATH #Optional to put cmake in path
 $ mkdir bin; cd bin
 $ cmake .. -G Ninja -DCMAKE_BUILD_TYPE=<Release, Debug, RelWithDebInfo, MinSizeRel>
 ...
@@ -66,3 +72,19 @@ Running main() from gmock_main.cc
 $ bin/main/main
 Hello, world!
 ```
+
+### Python virtual environment
+
+Build tools are installed installed in to a python virtual environment, located in the `.venv` directory, found in the project root. These tools are specified in the [py_requirements.txt](py_requirements.txt) file. You may choose to just add the `.venv/bin` directory directly to your `PATH` (as seen above), or you can work directly from the virtual environment by activating it, as follows:
+
+```bash
+$ . .venv/bin/activate
+```
+
+## Adding C/C++ packages
+
+Packages can be brought in through the Conan package manager. They are specified in the [conanfile.txt](conanfile.txt) file ([documentation](https://docs.conan.io/en/latest/reference/conanfile_txt.html)). They can be added as cmake dependencies using the conan.cmake convention "CONAN_PKG::*package_name*" (see gtest usage for an [example](test/CMakeLists.txt)). See the [bincrafters public-conan channel](https://bintray.com/bincrafters/public-conan) for a number of readily available packages.
+
+## License
+
+MIT License for the related source, do as you wish with this project. Hopefully you found it helpful - pull requrests welcome. Any dependencies may have their own respective licenses and you should follow them as appropriate.

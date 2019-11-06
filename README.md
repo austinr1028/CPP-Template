@@ -6,16 +6,16 @@ The purpose of this repository is to provide a baseline template for new C++ pro
 
 The template project is built upon the following technologies:
 
-* CMake
-* clang-format (TODO)
-* clang-tidy (TODO)
-* Conan
-* Doxygen (TODO)
-* Google Test
-* Git
-* Ninja
-* Python 3
-* Travis (TODO)
+* [CMake](https://cmake.org/)
+* [clang-format](https://clang.llvm.org/docs/ClangFormat.html) (TODO)
+* [clang-tidy](https://clang.llvm.org/extra/clang-tidy/) (TODO)
+* [Conan](https://conan.io/)
+* [Doxygen](http://www.doxygen.org/) (TODO)
+* [Google Test](https://github.com/google/googletest)
+* [Git](https://git-scm.com/)
+* [Ninja](https://ninja-build.org/)
+* [Python 3](https://www.python.org/)
+* [Travis CI](https://travis-ci.org/) (TODO)
 
 ## Requirements
 
@@ -27,7 +27,7 @@ Before being able to use this template, you need to have the following packages 
 
 ## Getting Started
 
-Run the provided [configure.py](configure.py) script. This will install all build dependencies in to a python virtual environment at the root of the project dir, named .venv
+Run the provided [configure.py](configure.py) script. This will install all build dependencies in to a python virtual environment at the root of the project dir, named `.venv`.
 
 Generating build directory:
 
@@ -43,13 +43,11 @@ $ cmake .. -G Ninja -DCMAKE_BUILD_TYPE=<Release, Debug, RelWithDebInfo, MinSizeR
 ```
 
 **Note:**
-OS X users may need to export:
+OS X users (using the apple clang compiler) may need to export:
 
 ```bash
 $ export SDKROOT=$(xcodebuild -version -sdk macosx Path)
 ```
-
-If using the apple clang compiler
 
 ## Compiling and running
 

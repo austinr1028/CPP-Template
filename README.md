@@ -87,4 +87,4 @@ Packages can be brought in through the Conan package manager. They are specified
 
 ## License
 
-MIT License for the related source, do as you wish with this project. Hopefully you found it helpful - pull requrests welcome. Any dependencies may have their own respective licenses and you should follow them as appropriate.
+[MIT License](LICENSE) for the related source, do as you wish with this project. Hopefully you found it helpful - pull requrests welcome. Any dependencies may have their own respective licenses and you should follow them as appropriate.

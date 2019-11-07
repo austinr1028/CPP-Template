@@ -16,3 +16,5 @@ install:
   - cmake --version
   - cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
   - cmake --build . --target all
+script:
+  - bin/test

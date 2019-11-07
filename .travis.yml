@@ -1,17 +1,13 @@
 dist: bionic
-matrix:
-  include:
-    - language: python
-      python: 3.7
-    - language: cpp
+language: cpp
 compiler:
   - clang
   - gcc
 os:
   - linux
 before_install:
-  - python --version
-  - python -m pip install -r requirements.txt
+  - python3 --version
+  - python3 -m pip install -r requirements.txt
 install:
   - cmake --version
   - cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release

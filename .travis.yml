@@ -1,0 +1,13 @@
+language: cpp
+dist: bionic
+python:
+  - 3.7
+compiler:
+  - clang
+  - gcc
+os:
+  - linux
+install:
+  - pip install requirements.txt
+  - .venv/bin/cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
+  - .venv/bin/cmake --build . --target all

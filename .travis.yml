@@ -6,8 +6,8 @@ compiler:
 os:
   - linux
 before_install:
-  - python3 --version
-  - python3 -m pip install -r requirements.txt
+  - pip3 --version
+  - pip3 -m pip install -r requirements.txt
 install:
   - cmake --version
   - cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release

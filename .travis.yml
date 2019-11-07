@@ -8,6 +8,7 @@ compiler:
 os:
   - linux
 install:
-  - pip install requirements.txt
+  - python3.7 -m pip install -r requirements.txt
+  - .venv/bin/cmake --version
   - .venv/bin/cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
   - .venv/bin/cmake --build . --target all

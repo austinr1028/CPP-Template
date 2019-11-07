@@ -13,6 +13,6 @@ before_install:
   - python --version
   - python -m pip install -r requirements.txt
 install:
-  - .venv/bin/cmake --version
-  - .venv/bin/cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
-  - .venv/bin/cmake --build . --target all
+  - cmake --version
+  - cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
+  - cmake --build . --target all

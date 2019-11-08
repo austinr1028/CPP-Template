@@ -6,13 +6,14 @@ compiler:
 os:
   - linux
 before_install:
-  - python --version
-  - python -m venv .venv
-  - .venv/bin/python --version
-  - .venv/bin/python -m pip install -r requirements.txt
+  - ls /opt/python
+  - /opt/python/3.6/bin/python --version
+  - /opt/python/3.6/bin/python -m venv ~/.venv
+  - ~/.venv/bin/python --version
+  - ~/.venv/bin/python -m pip install -r requirements.txt
 install:
-  - .venv/bin/cmake --version
-  - .venv/bin/cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
-  - .venv/bin/cmake --build . --target all
+  - ~/.venv/bin/cmake --version
+  - ~/.venv/bin/cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
+  - ~/.venv/bin/cmake --build . --target all
 script:
   - bin/test

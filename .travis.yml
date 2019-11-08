@@ -9,7 +9,7 @@ before_install:
   - pyenv install 3.7.1 --skip-existing
   - pyenv local 3.7.1
   - python -m venv cpp-template-venv
-  - pyenv local cpp-template-venv
+  - . cpp-template-venv/bin/activate
   - pip install -r requirements.txt
 install:
   - cmake --version

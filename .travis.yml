@@ -5,6 +5,8 @@ compiler:
   - gcc
 os:
   - linux
+  - osx
+  - windows
 before_install:
   - pyenv install 3.7.1 --skip-existing
   - pyenv local 3.7.1

@@ -1,5 +1,7 @@
 # CPP-Template
 
+[![Build Status](https://travis-ci.com/ternary-zeus/CPP-Template.svg?branch=master)](https://travis-ci.com/ternary-zeus/CPP-Template)
+
 ## Purpose
 
 The purpose of this repository is to provide a baseline template for new C++ projects. It provides a project based upon industry standard tools, with a focus on ease of use. It supplies everything from source code formatting, a build system with an integrated package manager, unit tests, and more.

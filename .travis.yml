@@ -10,10 +10,9 @@ before_install:
   - pyenv local 3.7.1
   - python -m venv cpp-template-venv
   - . cpp-template-venv/bin/activate
-  - pip install -r requirements.txt
 install:
-  - cmake --version
+  - pip install -r requirements.txt
+script:
   - cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
   - cmake --build . --target all
-script:
   - bin/test

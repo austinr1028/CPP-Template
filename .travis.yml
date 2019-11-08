@@ -1,0 +1,18 @@
+dist: bionic
+language: cpp
+compiler:
+  - clang
+  - gcc
+os:
+  - linux
+before_install:
+  - pyenv install 3.7.1 --skip-existing
+  - pyenv local 3.7.1
+  - python -m venv cpp-template-venv
+  - . cpp-template-venv/bin/activate
+install:
+  - pip install -r requirements.txt
+script:
+  - cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
+  - cmake --build . --target all
+  - bin/test

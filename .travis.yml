@@ -8,6 +8,7 @@ os:
   - osx
   - windows
 before_install:
+  - | [[ ${TRAVIS_OS_NAME} -eq "osx" ]] && brew update && brew upgrade pyenv
   - pyenv install 3.7.1 --skip-existing
   - pyenv local 3.7.1
   - python -m venv cpp-template-venv

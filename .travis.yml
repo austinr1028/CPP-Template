@@ -1,16 +1,15 @@
 dist: bionic
 language: cpp
-matrix:
-  include:
-    - os: linux
-      env: PYTHON=3.7.1
 compiler:
   - clang
   - gcc
+os:
+  - linux
 before_install:
-  - python --version
-  - python -m venv venv
-  - . venv/bin/activate
+  - pyenv versions
+  - /opt/python/3.7.1/bin/python --version
+  - /opt/python/3.7.1/bin/python -m venv ~/.venv
+  - . ~/.venv/bin/activate
   - pip install -r requirements.txt
 install:
   - cmake --version

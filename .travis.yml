@@ -8,6 +8,7 @@ os:
   - osx
   - windows
 before_install:
+  - pyenv versions
   - |
     if [ "${TRAVIS_OS_NAME}" = "osx" ]; then brew -v upgrade pyenv; fi
   - pyenv install 3.7.1 --skip-existing

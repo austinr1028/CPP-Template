@@ -7,7 +7,8 @@ os:
   - linux
 before_install:
   - pyenv install 3.7.1 --skip-existing
-  - pyenv virtualenv 3.7.1 cpp-template-venv
+  - pyenv local 3.7.1
+  - python -m venv cpp-template-venv
   - pyenv local cpp-template-venv
   - pip install -r requirements.txt
 install:
